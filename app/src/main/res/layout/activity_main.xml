@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtPopular"
+        android:text="@string/popular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txtPopular"
+        app:layout_constraintTop_toBottomOf="@+id/txtPopular"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvPopular"/>
+
+
+    <TextView
+        android:id="@+id/txtTopRated"
+        android:layout_marginTop="10dp"
+        android:text="@string/top_rated"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtPopular"
+        app:layout_constraintTop_toBottomOf="@id/rvPopular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txtPopular"
+        app:layout_constraintTop_toBottomOf="@+id/txtTopRated"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvTopRated"/>
+
+    <TextView
+        android:id="@+id/txtRevenue"
+        android:layout_marginTop="10dp"
+        android:text="Upcoming"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtPopular"
+        app:layout_constraintTop_toBottomOf="@id/rvTopRated"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txtPopular"
+        app:layout_constraintTop_toBottomOf="@+id/txtRevenue"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvRevenue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
