@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         rvRevenue.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
         rvRevenue.setHasFixedSize(true)
         getMovieDataUpComing { movies:List<Movie> ->
             val adapterRevenue=MovieAdapter(movies)
